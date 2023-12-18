@@ -1,0 +1,23 @@
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/security2fa
+    password: '!QAZ2wsx'
+    username: root
+  jpa:
+    database-platform: org.hibernate.dialect.MySQL8InnoDBDialect
+    generate-ddl: false
+    show-sql: false
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL8Dialect
+        format_sql: false
+
+application:
+  security:
+    jwt:
+      secret-key: bb3c76f55d6a70cf717308e32c111c1c48bf9f53f45b4039351cd3fc905d6e74
+      expiration: 86400000 # a day
+      refresh-token:
+        expiration: 604800000 # 7 days
